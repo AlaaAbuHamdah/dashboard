@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&display=swap');
+
+:root {
+    --main-color: #22223B;
+    --second-color: #4A4E69;
+    --third-color: #9A8C98;
+    --fourth-color: #C9ADA7;
+    --fifth-color: #F2E9E4;
+}
+
+body {
+    font-family: cairo;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+header {
+    background-color: var(--third-color);
+    box-shadow: 3px 3px 3px var(--second-color);
+}
+
+.logo {
+    width: 250px;
+    text-align: center;
+    border-right: 1px solid var(--second-color);
+}
+
+.logo a {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid var(--second-color);
+}
+
+.bell::after {
+    content: "3";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(165, 17, 17);
+    border-radius: 50%;
+    color: white;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment::after {
+    content: "8";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-color: green;
+    border-radius: 50%;
+    color: white;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--main-color);
+    height: 100vh;
+    position: fixed;
+    top: 69px;
+    overflow: hidden;
+    transition: 0.3s;
+    overflow-y: scroll;
+    z-index: 1000 !important;
+}
+
+.content {
+    background-color: var(--fifth-color);
+    /* height: calc(100vh - 83px); */
+    margin-left: 250px;
+    margin-top: 83px;
+    transition: 3s;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        left: -250px;
+        overflow: hidden;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+.icons i,
+.active-users,
+#toggle-sidebar {
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.avatar img {
+    width: 50px;
+    /* height: 60px;
+border-radius: 50% !important;
+border: 1px solid var(--main-color); */
+}
+
+.profile {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .profile img {
+    border-radius: 50%;
+    border: 2px solid var(--fifth-color);
+    padding: 2px;/
+} */
+.profile h3 {
+    color: var(--fifth-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ul-sidebar {
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.ul-sidebar li {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: var(--second-color);
+
+
+}
+
+.ul-sidebar li:hover {
+    cursor: pointer;
+    padding: 5px;
+    background-color: var(--second-color);
+    border-radius: 5px;
+}
+
+.ul-sidebar li a,
+.ul-sidebar li i {
+    color: var(--fourth-color);
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+    background: var(--second-color);
+    border-radius: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--fourth-color);
+}
+
+.stat {
+
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.stat h3 {
+    color: var(--fifth-color);
+    font-family: Almarai;
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+.stat h4 {
+    color: var(--fourth-color);
+    font-family: Almarai;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stat p {
+    color: var(--main-color);
+    font-family: Almarai;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.shield,
+.cpu,
+.mem,
+.sto {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.sys {
+    background-image: linear-gradient(180deg, var(--second-color), var(--third-color));
+}
+
+.cpu1 {
+    background-image: linear-gradient(150deg, var(--second-color), var(--fifth-color));
+}
+
+.mem {
+    background-image: linear-gradient(150deg, var(--second-color), var(--fourth-color));
+}
+
+.sto {
+    background-image: linear-gradient(185deg, var(--second-color), var(--third-color));
+}
+
+#chart2,
+#chart {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.chart .card {
+    background-color: var(--fifth-color);
+    border: 1px dotted var(--third-color);
+
+
+}
+
+.inner-content p {
+    color: var(--second-color);
+    font-weight: bold;
+    font-size: 25px;
+
+
+
+}
+
+/* cpu.html */
+.cpuUsage {
+    color: var(--second-color);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.taskButton {
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.headd th {
+    color: var(--fifth-color) !important;
+    font: bold;
+    font-size: 16px;
+    background-color: var(--second-color) !important;
+    border: 1px solid var(--third-color);
+}
+
+td button {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* تلوين الصفوف الزوجية */
+tr:nth-child(even) td {
+    color: var(--main-color) !important;
+    background-color: var(--third-color) !important;
+    font-weight: 600;
+}
+
+/* تلوين الصفوف الفردية */
+tr:nth-child(odd) td {
+    color: var(--main-color) !important;
+    background-color: var(--fifth-color) !important;
+    font-weight: 600;
+}
+
+td button {
+    color: white !important;
+    font: bold !important;
+
+}
+
+td .R {
+    background-color: rgb(117, 165, 22) !important;
+}
+
+td .D {
+    background-color: rgb(35, 98, 128) !important;
+}
+
+td .De {
+    background-color: rgb(109, 6, 6) !important;
+}
+
+tr:hover td {
+    background-color: var(--second-color) !important;
+    color: var(--fifth-color) !important;
+    font: bold !important;
+}
+
+td,
+th {
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--second-color);
+}
+
+
+
+/* ===== تخصيص الأزرار ===== */
+td .btn-Details,
+td .btn-Resume,
+td .btn-Delete {
+    font-size: 15px !important;
+    padding: 3px 8px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    margin: 0 2px !important;
+}
+
+td .btn-Details {
+    background-color: rgb(35, 98, 128) !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+td .btn-Details:hover {
+    background-color: var(--main-color) !important;
+    color: var(--fifth-color) !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+td .btn-Resume {
+    background-color: rgb(117, 165, 22) !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+td .btn-Resume:hover {
+    background-color: #5a7a1a !important;
+    color: white !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+td .btn-Delete {
+    background-color: rgb(109, 6, 6) !important;
+    color: white !important;
+    border-radius: 20px !important;
+}
+
+td .btn-Delete:hover {
+    background-color: #7a0404 !important;
+    color: white !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ===== أيقونات الأزرار ===== */
+td .btn i {
+    margin-right: 3px !important;
+    font-size: 10px !important;
+}
+
+/* ===== منع تعارض Hover الصف مع Hover الأزرار ===== */
+tr:hover td .btn-Details,
+tr:hover td .btn-Resume,
+tr:hover td .btn-Delete {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+tr td .btn-Details:hover,
+tr td .btn-Resume:hover,
+tr td .btn-Delete:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+/* ===== منع الأزرار من النزول لسطر جديد ===== */
+td {
+    white-space: nowrap !important;
+}
+
+/* ===== جعل عمود الإجراءات لا يلتف ===== */
+td:last-child {
+    min-width: 180px !important;
+    white-space: nowrap !important;
+}
+
+/* ===== تنسيق حالة (Status) ===== */
+.status-running {
+    background-color: rgb(117, 165, 22) !important;
+    color: white !important;
+    padding: 4px 14px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+}
+
+.status-sleeping {
+    background-color: var(--fourth-color) !important;
+    color: var(--main-color) !important;
+    padding: 4px 14px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+}
+
+.dropdown .btn {
+    background-color: var(--fourth-color);
+    color: var(--main-color) !important;
+}
+
+.form-select:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid var(--second-color);
+    color: var(--second-color);
+}
+
+.form-select option {
+    color: var(--main-color) !important;
+}
+
+.form-select option:checked {
+    background-color: var(--third-color) !important;
+}
+
+.form-select option:hover {
+    background-color: var(--second-color) !important;
+    color: var(--fifth-color) !important;
+}
+
+.dropdown-menu li a {
+    color: var(--second-color) !important;
+    font-weight: 500 !important;
+
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--second-color) !important;
+    color: var(--fifth-color) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--fifth-color);
+}
+
+.logs label {
+    font-size: 20px;
+    color: var(--second-color) !important;
+}
+
+/* .logs input:focus {
+    background-color: var(--fourth-color);
+} */
+
+.logs {
+    background-color: var(--fifth-color);
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.messages-container {
+    cursor: pointer;
+}
+
+.messages-area {
+    background-color: var(--fourth-color);
+    width: 300px;
+    top: 55px;
+    right: -120px;
+    /* padding: 10px; */
+    border-radius: 5px;
+    border-bottom: 1px solid var(--second-color);
+
+    display: none;
+}
+
+.messages-area li {
+    padding: 5px;
+    border-bottom: 1px solid var(--second-color);
+    cursor: pointer;
+
+}
+
+.messages-area li:hover {
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+}
+
+.messages-header {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.messages-header::after {
+    content: "";
+    position: absolute;
+    top: -22px;
+    right: 120px;
+    /* width: 15px;
+    height: 15px; */
+    border: 10px solid;
+    border-color: transparent transparent var(--main-color) transparent;
+}
+
+.messages-header h3 {
+    color: var(--fifth-color);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.item-menu-left {
+    align-items: center;
+}
+
+.item-menu-left img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+
+.item-menu-left h4 {
+    color: var(--main-color);
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+
+/* ===== تجاوب الجدول مع الجوال ===== */
+
+/* حاوية الجدول مع تمرير أفقي */
+.table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* للشاشات الصغيرة (جوال) */
+@media (max-width: 767.98px) {
+
+    /* إخفاء رأس الجدول */
+    .table thead {
+        display: none !important;
+    }
+
+    /* عرض كل صف كبطاقة */
+    .table tbody tr {
+        display: block !important;
+        margin-bottom: 15px !important;
+        border: 1px solid var(--third-color) !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        background-color: var(--fifth-color) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* عرض كل خلية كصف أفقي (label + value) */
+    .table tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 6px 8px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--fourth-color) !important;
+        font-size: 13px !important;
+        background-color: transparent !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+    }
+
+    /* إزالة الحدود من آخر خلية */
+    .table tbody td:last-child {
+        border-bottom: none !important;
+    }
+
+    /* إظهار الـ label قبل القيمة */
+    .table tbody td::before {
+        content: attr(data-label) !important;
+        font-weight: bold !important;
+        color: var(--second-color) !important;
+        margin-right: 15px !important;
+        flex-shrink: 0 !important;
+        font-size: 12px !important;
+    }
+
+    /* تصغير الـ badge والأزرار */
+    .table .badge {
+        font-size: 11px !important;
+        padding: 3px 10px !important;
+    }
+
+    .table .btn-Delete {
+        font-size: 11px !important;
+        padding: 3px 10px !important;
+    }
+
+    /* تعديل عرض الأرقام التسلسلية */
+    .table tbody td:first-child {
+        font-weight: bold;
+        color: var(--main-color);
+    }
+}
+
+/* للشاشات المتوسطة (تابلت) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .table {
+        font-size: 13px !important;
+    }
+
+    .table thead th {
+        font-size: 12px !important;
+        padding: 8px 6px !important;
+    }
+
+    .table tbody td {
+        font-size: 12px !important;
+        padding: 8px 6px !important;
+    }
+
+    .table .btn-Delete {
+        font-size: 11px !important;
+        padding: 2px 8px !important;
+    }
+}
+
+/* أزرار الحفظ والتراجع */
+.btn-save {
+    background-color: var(--main-color) !important;
+    color: var(--fifth-color) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-save:hover {
+    background-color: var(--second-color) !important;
+    transform: scale(1.03) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-cancel {
+    background-color: var(--fourth-color) !important;
+    color: var(--main-color) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-cancel:hover {
+    background-color: var(--third-color) !important;
+    transform: scale(1.03) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}

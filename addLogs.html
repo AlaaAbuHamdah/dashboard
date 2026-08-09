@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD LOGS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/CSS/bootstrap.css">
+    <link rel="stylesheet" href="assets/CSS/custom.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/48.3.1/ckeditor5.css">
+    <style>
+        .ck-editor__editable {
+            height: 108px !important;
+        }
+
+        .ck-editor__editable:focus {
+            box-shadow: none !important;
+            outline: none !important;
+            border: 1px solid #4A4E69 !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+
+                <!-- rightNav -->
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">DashBoard</a>
+                    </div>
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-bars-progress" id="toggle-sidebar"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </form>
+                </div>
+
+
+                    <!-- leftNav -->
+                    <div class="left-header d-flex align-items-center gap-3 px-3">
+                        <div class="icons d-flex gap-3">
+                            <a href=""><i class="fa-solid fa-triangle-exclamation"></i></a>
+                            <a href="" class="position-relative bell"><i class="fa-regular fa-bell"></i></a>
+                            <a href=""><i class="fa-solid fa-gear"></i></a>
+                    
+                            <div class="messages-container position-relative" id="messages-container">
+                                <i class="position-relative comment fa-regular fa-comment"></i>
+                                <ul class="messages-area position-absolute text-center" id="messages-area">
+                                    <div class="messages-header">
+                                        <h3>Messages</h3>
+                                    </div>
+                                    <li class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex gap-1 item-menu-left">
+                                            <img width="40" src="assets/Images/1.jpg">
+                                            <h4>Ahmad Ali</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex gap-1 item-menu-left">
+                                            <img width="40" src="assets/Images/2.jpg">
+                                            <h4>Mohammed Al-Dabbagh</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex gap-1 item-menu-left">
+                                            <img width="40" src="assets/Images/3.jpg">
+                                            <h4>Maher Dakkak</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex gap-1 item-menu-left">
+                                            <img width="40" src="assets/Images/4.jpg">
+                                            <h4>Marwa Alsafi</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <li class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex gap-1 item-menu-left">
+                                            <img width="40" src="assets/Images/5.jpg">
+                                            <h4>Noor Alomari</h4>
+                                        </div>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </li>
+                                    <a href=""
+                                        style="background-color:green; color: white; text-decoration: none; padding: 10px; display: block; text-align: center; border-radius: 5px;">Show
+                                        All Messages</a>
+                                </ul>
+                            </div>
+                    
+                    
+                    
+                    
+                    
+                        </div>
+                        <div class="avatar">
+                            <img src="assets/Images/avatar.png" alt="Avatar">
+                        </div>
+                        <a data-bs-toggle="offcanvas" href="#users-online"><i class="fa-solid fa-bars-staggered active-users"></i></a>
+                    </div>
+            </header>
+        </nav>
+
+        <div class="sidebar" id="sidebar">
+            <div class="profile">
+                <img width="100" height="100" src="assets/Images/avatar.png" alt="Profile Picture">
+                <h3>Alaa Abu Hamdah</h3>
+            </div>
+
+            <ul class="ul-sidebar">
+                <li class="mb-2">
+                    <i class="fa-solid fa-gauge-high fs-5"></i>
+                    <a href="./index.html" class="m-l-10">Dashboard</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-microchip fs-5"></i>
+                    <a href="./cpu.html" class="m-l-10">CPU</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-memory fs-5"></i>
+                    <a href="" class="m-l-10">Memory</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-hdd fs-5"></i>
+                    <a href="" class="m-l-10">Storage</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-network-wired fs-5"></i>
+                    <a href="" class="m-l-10">Network</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gears fs-5"></i>
+                    <a href="" class="m-l-10">Processes</a>
+                </li>
+                <li class="mb-2  active">
+                    <i class="fa-solid fa-file fs-5"></i>
+                    <a href="./logs.html" class="m-l-10">Logs</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gear fs-5"></i>
+                    <a href="" class="m-l-10">Settings</a>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4 class="cpuUsage pb-0">
+                        System Activity Log
+                    </h4>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card p-2 logs">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="">
+                                            Log ID
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="">Timestamp
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="">
+                                            Level
+                                        </label>
+                                        <select class="form-select" aria-label="Level select">
+                                            <option selected disabled>Select Level</option>
+                                            <option value="Info">Info</option>
+                                            <option value="Warning">Warning</option>
+                                            <option value="Error">Error</option>
+                                            <option value="Debug">Debug</option>
+                                            <option value="Critical">Critical</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="">Log Type
+                                        </label>
+                                        <select class="js-example-basic-multiple form-select" multiple="multiple"
+                                            name="categories[]">
+                                            <option value="system">🖥️ System</option>
+                                            <option value="security">🔒 Security</option>
+                                            <option value="database">🗄️ Database</option>
+                                            <option value="network">🌐 Network</option>
+                                            <option value="storage">💾 Storage</option>
+                                            <option value="application">📱 Application</option>
+                                            <option value="performance">⚡ Performance</option>
+                                            <option value="maintenance">🔧 Maintenance</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">
+                                                <i class="fa-regular fa-file-lines me-2"></i>Upload Log File
+                                            </label>
+                                            <input class="form-control" type="file" id="formFile"
+                                                style="border: 2px solid var(--third-color);">
+                                            <small class="text-muted">Supported formats: .log, .txt, .json </small>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">
+                                                <i class="fa-regular fa-image me-2"></i>Upload Screenshot
+                                            </label>
+                                            <input class="form-control" type="file" id="formFile"
+                                                style="border: 2px solid var(--third-color);">
+                                            <small class="text-muted">PNG, JPG, or GIF (max 5MB)</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <textarea name="editor" class="form-control" id="editor"></textarea>
+                                </div>
+
+
+                                <!-- أزرار الحفظ والتراجع -->
+                                <div class="row mt-4">
+                                    <div class="col-12 d-flex gap-3 justify-content-end">
+                                        <button type="reset" class="btn btn-cancel px-4 py-2">
+                                            <i class="fa-regular fa-circle-xmark me-2"></i> Cancel
+                                        </button>
+                                        <button type="submit" class="btn btn-save px-4 py-2">
+                                            <i class="fa-regular fa-floppy-disk me-2"></i> Save Log
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- users online list  -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="users-online" aria-labelledby="offcanvasExampleLabel"
+        style="background-color: var(--fifth-color); width: 400px;">
+        <div class="offcanvas-header" style="background-color: var(--second-color);">
+            <h5 class="offcanvas-title p-2" id="offcanvasExampleLabel" style="color: var(--fifth-color);">
+                Running Processes
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="filter: invert(1);"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="process-side">
+
+                <!-- إحصائيات سريعة -->
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <div class="card text-center p-2" style="background-color: var(--fourth-color); border: none;">
+                            <small style="color: var(--main-color); font-weight: bold;">Total</small>
+                            <h5 style="color: var(--main-color); font-weight: bold;">18</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card text-center p-2" style="background-color: var(--third-color); border: none;">
+                            <small style="color: var(--main-color); font-weight: bold;">Active</small>
+                            <h5 style="color: var(--main-color); font-weight: bold;">24</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- شريط البحث  -->
+                <div class="row mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search processes..."
+                            style="border: 2px solid var(--third-color);">
+                        <button class="btn" style="background-color: var(--second-color); color: var(--fifth-color);"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+
+                <!-- قائمة العمليات -->
+                <div class="list-group">
+
+                    <!-- عملية 1 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-brands fa-chrome me-2" style="color: #4285F4;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">chrome.exe</span>
+                            </div>
+                            <span class="badge bg-success">12%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 2436</small>
+                            <small style="color: var(--second-color);">User: sarah</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 12%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عملية 2 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-solid fa-code me-2" style="color: #3776AB;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">python.exe</span>
+                            </div>
+                            <span class="badge bg-warning">32%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 1876</small>
+                            <small style="color: var(--second-color);">User: root</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 32%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عملية 3 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-brands fa-node-js me-2" style="color: #339933;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">node.exe</span>
+                            </div>
+                            <span class="badge bg-info">7%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 3421</small>
+                            <small style="color: var(--second-color);">User: sarah</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 7%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عملية 4 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-solid fa-cube me-2" style="color: #0dcaf0;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">docker.exe</span>
+                            </div>
+                            <span class="badge bg-warning">15%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 4567</small>
+                            <small style="color: var(--second-color);">User: root</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عملية 5 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-solid fa-database me-2" style="color: #007396;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">mysql.exe</span>
+                            </div>
+                            <span class="badge bg-secondary">3%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 1234</small>
+                            <small style="color: var(--second-color);">User: mysql</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 3%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- عملية 6 -->
+                    <div class="list-group-item mb-2 rounded"
+                        style="background-color: white; border: 1px solid var(--third-color);">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa-brands fa-spotify me-2" style="color: #1DB954;"></i>
+                                <span style="color: var(--main-color); font-weight: 600;">spotify.exe</span>
+                            </div>
+                            <span class="badge bg-info">77%</span>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <small style="color: var(--second-color);">PID: 4567</small>
+                            <small style="color: var(--second-color);">User: sarah</small>
+                        </div>
+                        <div class="mt-1">
+                            <div class="progress" style="height: 4px;">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 77%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- زر Refresh -->
+                <div class="mt-3 text-center">
+                    <button class="btn w-100" style="background-color: var(--second-color); color: var(--fifth-color);">
+                        <i class="fa-solid fa-rotate me-2"></i>Refresh Processes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexchartprimarys"></script>
+    <script src="assets/JS/charts.js"></script>
+    <script src="assets/JS/bootstrap.js"></script>
+    <script src="assets/JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2({
+                tags: true,
+                maximumSelectionLength: 3
+            });
+        });
+    </script>
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+                "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+            }
+        }
+    
+    </script>
+
+    <script type="module">
+        import {
+            ClassicEditor,
+            Essentials,
+            Bold,
+            Italic,
+            Underline,
+            Strikethrough,
+            Subscript,
+            Superscript,
+            Font,
+            Paragraph,
+            CodeBlock,
+            Link,
+            List,
+            Image,
+            ImageToolbar,
+            ImageCaption,
+            ImageStyle,
+            ImageResize,
+            Table,
+            TableToolbar,
+            MediaEmbed,
+            BlockQuote,
+            Alignment,
+            Highlight,
+            RemoveFormat,
+            Heading,
+            TodoList,
+            Indent,
+            IndentBlock
+        } from 'ckeditor5';
+
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                plugins: [
+                    Essentials, Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Font, Paragraph, CodeBlock,
+                    Link, List, Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize, Table, TableToolbar,
+                    MediaEmbed, BlockQuote, Alignment, Highlight, RemoveFormat, Heading, TodoList, Indent, IndentBlock
+                ],
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|',
+                        'heading',
+                        '|',
+                        'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                        '|',
+                        'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'code',
+                        '|',
+                        'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                        '|',
+                        'alignment',
+                        '|',
+                        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+                        '|',
+                        'insertTable', 'mediaEmbed',
+                        '|',
+                        'highlight', 'removeFormat'
+                    ],
+                    shouldNotGroupWhenFull: true
+                },
+                image: {
+                    toolbar: [
+                        'imageTextAlternative', 'toggleImageCaption', 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', 'linkImage'
+                    ]
+                },
+                table: {
+                    contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+                },
+                language: {
+                    lnguage: 'ar',
+                    languageDirection: 'rtl'
+                }
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+</body>
+
+</html>
