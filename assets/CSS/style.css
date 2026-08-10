@@ -643,3 +643,195 @@ td:last-child {
     transform: scale(1.03) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
+
+
+/* ===== البطاقات ===== */
+.stat {
+    border-radius: 16px;
+    padding: 18px 12px !important;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.stat h3 {
+    font-size: 14px !important;
+    font-weight: 600;
+    color: var(--fifth-color);
+    letter-spacing: 0.5px;
+}
+
+.stat h4 {
+    font-size: 24px !important;
+    font-weight: 700;
+    color: var(--fifth-color);
+}
+
+.stat p {
+    font-size: 12px !important;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.stat i {
+    font-size: 32px !important;
+    opacity: 0.8;
+}
+
+/* ===== الجوال ===== */
+@media (max-width: 576px) {
+    .stat {
+        padding: 14px 8px !important;
+        min-height: 100px;
+        border-radius: 12px;
+    }
+
+    .stat h3 {
+        font-size: 11px !important;
+    }
+
+    .stat h4 {
+        font-size: 18px !important;
+    }
+
+    .stat p {
+        font-size: 10px !important;
+    }
+
+    .stat i {
+        font-size: 24px !important;
+    }
+
+    .card {
+        padding: 12px !important;
+    }
+
+    #chart,
+    #chart2 {
+        height: 200px !important;
+    }
+}
+
+/* ===== التابليت ===== */
+@media (min-width: 577px) and (max-width: 992px) {
+    .stat h3 {
+        font-size: 13px !important;
+    }
+
+    .stat h4 {
+        font-size: 22px !important;
+    }
+
+    .stat i {
+        font-size: 28px !important;
+    }
+
+    #chart,
+    #chart2 {
+        height: 230px !important;
+    }
+}
+
+/* ===== الشاشات الكبيرة ===== */
+@media (min-width: 993px) {
+    .stat h3 {
+        font-size: 16px !important;
+    }
+
+    .stat h4 {
+        font-size: 28px !important;
+    }
+
+    .stat i {
+        font-size: 36px !important;
+    }
+
+    #chart,
+    #chart2 {
+        height: 280px !important;
+    }
+}
+
+/* ===== الكارد ===== */
+.card {
+    border-radius: 16px;
+    border: 1px solid var(--third-color);
+    background-color: var(--fifth-color);
+}
+
+/* ===== تحسين المخططات على الجوال ===== */
+#chart,
+#chart2 {
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* للجوالات الصغيرة */
+@media (max-width: 576px) {
+
+    #chart,
+    #chart2 {
+        height: 200px !important;
+    }
+
+    .card #chart,
+    .card #chart2 {
+        height: 200px !important;
+    }
+}
+
+/* للجوالات المتوسطة */
+@media (min-width: 577px) and (max-width: 768px) {
+
+    #chart,
+    #chart2 {
+        height: 220px !important;
+    }
+}
+
+/* للتابلت */
+@media (min-width: 769px) and (max-width: 992px) {
+
+    #chart,
+    #chart2 {
+        height: 240px !important;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 993px) {
+
+    #chart,
+    #chart2 {
+        height: 280px !important;
+    }
+}
+
+/* ضبط الـ Legend والـ Labels عشان ما تتداخل */
+.apexcharts-legend {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 4px !important;
+}
+
+.apexcharts-legend-text {
+    font-size: 10px !important;
+}
+
+.apexcharts-datalabels text {
+    font-size: 10px !important;
+}
+
+/* للجوال */
+@media (max-width: 576px) {
+    .apexcharts-legend-text {
+        font-size: 8px !important;
+    }
+
+    .apexcharts-datalabels text {
+        font-size: 8px !important;
+    }
+}
