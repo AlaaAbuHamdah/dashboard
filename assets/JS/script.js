@@ -45,25 +45,24 @@ messagesContainer.addEventListener("click", function () {
 new DataTable("#example", {
   responsive: true,
 
-  buttons: [
+ buttons: [
     {
       extend: "copy",
       text: '<i class="fas fa-copy"></i> Copy',
-      className: "btn btn-primary btn-sm me-1",
+      className: "btn btn-primary btn-sm rounded-start-0 rounded-end-0 me-1", 
+   
     },
     {
       extend: "excel",
       text: '<i class="fas fa-file-excel"></i> Excel',
-      className: "btn btn-success btn-sm me-1",
+      className: "btn btn-success btn-sm rounded-0 me-1",
     },
     {
       extend: "pdf",
       text: '<i class="fas fa-file-pdf"></i> PDF',
-      className: "btn btn-danger btn-sm me-1",
+      className: "btn btn-danger btn-sm rounded-start-0 rounded-end-0 me-1",
     },
-  ],
-  layout: {
+],
+layout: {
     topStart: "buttons",
-    topEnd: "search",
-  },
-});
+}});
