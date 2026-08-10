@@ -95,10 +95,6 @@
                             </ul>
                         </div>
 
-
-
-
-
                     </div>
                     <div class="avatar">
                         <img src="assets/Images/avatar.png" alt="Avatar">
@@ -163,76 +159,85 @@
             </ul>
         </div>
 
-        <div class="content p-3" id="content">
-            <div class="inner-content chart">
-                <div class="container-fluid">
-                    <div class="row gap-2 flex-md-nowrap flex-wrap">
-                        <div class="col-md-3 stat sys flex-shrink-1">
-                            <div>
-                                <h3 class="mb-3">System Status</h3>
-                                <h4>98%</h4>
-                                <p>System Stable</p>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-shield-halved fs-1 shield"></i>
-                            </div>
+<div class="content p-3" id="content">
+    <div class="inner-content chart">
+        <div class="container-fluid">
+
+            <!-- ===== البطاقات بشكل مريح ===== -->
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="stat sys p-3 text-center">
+                        <div>
+                            <h3 class="mb-1">System Status</h3>
+                            <h4 class="mb-0">98%</h4>
+                            <p class="small mb-0">Stable</p>
                         </div>
-                        <div class="col-md-3 stat cpu1 flex-shrink-1">
-                            <div>
-                                <h3 class="mb-3">CPU Usage</h3>
-                                <h4>75%</h4>
-                                <p>Running Fine</p>
-
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-microchip fs-1 cpu"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-3 stat mem flex-shrink-1">
-                            <div>
-                                <h3 class="mb-3">Memory Usage</h3>
-                                <h4>8.2 GB</h4>
-                                <p>16 GB total</p>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-memory fs-1 memory"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-3 stat sto flex-shrink-1">
-                            <div>
-                                <h3 class="mb-3">Storage Usage</h3>
-                                <h4>120 GB</h4>
-                                <p>256 GB total</p>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-hdd fs-1 storage"></i>
-                            </div>
-
-
-
-
-
+                        <div class="mt-2">
+                            <i class="fa-solid fa-shield-halved fs-1 shield"></i>
                         </div>
                     </div>
-                    <!-- صف المخططين -->
-                    <div class="row g-3 mt-2">
-                        <div class="col-12 col-lg-6 d-flex">
-                            <div class="card w-100 d-flex flex-column">
-                                <p class="text-center mt-2 fw-bold mb-0">System Performance</p>
-                                <div id="chart" class="flex-grow-1" style="min-height: 280px;"></div>
-                            </div>
-                        </div>
+                </div>
 
-                        <div class="col-12 col-lg-6 d-flex">
-                            <div class="card w-100 d-flex flex-column">
-                                <p class="text-center mt-2 fw-bold mb-0">CPU Usage</p>
-                                <div id="chart2" class="flex-grow-1" style="min-height: 280px;"></div>
-                            </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat cpu1 p-3 text-center">
+                        <div>
+                            <h3 class="mb-1">CPU Usage</h3>
+                            <h4 class="mb-0">75%</h4>
+                            <p class="small mb-0">Running</p>
+                        </div>
+                        <div class="mt-2">
+                            <i class="fa-solid fa-microchip fs-1 cpu"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="stat mem p-3 text-center">
+                        <div>
+                            <h3 class="mb-1">Memory</h3>
+                            <h4 class="mb-0">8.2 GB</h4>
+                            <p class="small mb-0">16 GB total</p>
+                        </div>
+                        <div class="mt-2">
+                            <i class="fa-solid fa-memory fs-1 memory"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <div class="stat sto p-3 text-center">
+                        <div>
+                            <h3 class="mb-1">Storage</h3>
+                            <h4 class="mb-0">120 GB</h4>
+                            <p class="small mb-0">256 GB total</p>
+                        </div>
+                        <div class="mt-2">
+                            <i class="fa-solid fa-hdd fs-1 storage"></i>
                         </div>
                     </div>
                 </div>
             </div>
+
+        <!-- ===== المخططات ===== -->
+        <div class="row g-3 mt-3">
+            <div class="col-12 col-lg-6">
+                <div class="card p-2 p-md-3">
+                    <p class="text-center fw-bold mb-1 mb-md-2" style="font-size: 13px;">System Performance</p>
+                    <div id="chart" style="width: 100%; height: 260px;"></div>
+                </div>
+            </div>
+        
+            <div class="col-12 col-lg-6">
+                <div class="card p-2 p-md-3">
+                    <p class="text-center fw-bold mb-1 mb-md-2" style="font-size: 13px;">Resource Distribution</p>
+                    <div id="chart2" style="width: 100%; height: 260px;"></div>
+                </div>
+            </div>
         </div>
+
+        </div>
+    </div>
+</div>
     </div>
 
 
