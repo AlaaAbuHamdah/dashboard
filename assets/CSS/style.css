@@ -560,6 +560,9 @@ td:last-child {
     background-color: var(--second-color);
     color: var(--fifth-color) !important ;
 }
+.messages-area li:hover h4 {
+    color: var(--fifth-color);
+}
 
 .messages-header {
     background-color: var(--main-color);
