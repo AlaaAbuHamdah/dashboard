@@ -94,7 +94,7 @@ header {
     /* height: calc(100vh - 83px); */
     margin-left: 250px;
     margin-top: 83px;
-    transition: 3s;
+    transition:0.3s;
 }
 
 @media (max-width: 768px) {
