@@ -841,3 +841,38 @@ td:last-child {
         font-size: 8px !important;
     }
 }
+
+
+
+/* ===== حل مشكلة المسافة البيضاء تحت المخططات ===== */
+#content {
+    background-color: var(--fifth-color);
+    min-height: 100vh;
+    padding-bottom: 10px;
+}
+
+.inner-content {
+    height: auto;
+    min-height: calc(100vh - 83px); /* حسب ارتفاع الـ Navbar */
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.row {
+    margin-bottom: 0 !important;
+}
+
+.card {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+#chart, #chart2 {
+    width: 100% !important;
+    height: 260px !important;
+    max-height: 280px;
+}
