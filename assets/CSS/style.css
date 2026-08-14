@@ -94,7 +94,7 @@ header {
     margin-left: 250px;
     margin-top: 83px;
     transition:0.3s;
-    padding-top: 20px !important;
+    height: 100vh !important;
 }
 
 @media (max-width: 768px) {
