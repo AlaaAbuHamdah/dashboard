@@ -91,7 +91,6 @@ header {
 
 .content {
     background-color: var(--fifth-color);
-    height: 400px !important;
     margin-left: 250px;
     margin-top: 83px;
     transition:0.3s;
