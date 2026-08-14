@@ -8,7 +8,7 @@ var options = {
   ],
   chart: {
     type: "bar",
-    height: 260,
+    height: 280,
     stacked: true,
     toolbar: { show: false },
     dropShadow: { enabled: true, blur: 1, opacity: 0.5 },
@@ -67,7 +67,7 @@ var options2 = {
   series: [44, 55, 41, 17, 15],
   chart: {
     width: "100%",
-    height: 260,
+    height: 280,
     type: "donut",
     dropShadow: {
       enabled: true,
